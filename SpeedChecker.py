@@ -9,6 +9,6 @@ def check_speed():
         if d>5:
             print("WARNING!")
         if d>10:
-            print("Lisence Suspended!")
+            print("Lisence Suspended!!")
     print("Demerit Points: ",d)
 check_speed()

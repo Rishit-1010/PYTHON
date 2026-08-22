@@ -1,0 +1,419 @@
+1) Write a function to find area and perimeter of a rectangle.
+2) Write a function to find sum of first 10 natural numbers.
+3) Write a program to find sum of all elements in the tuple.
+4) Write a program to increase each element of a given list by 1 and print updated list.
+5) Write a Python Program to Find ASCII Value of Character. (use .ord())
+6) Write a Python Program to Display Calendar.
+7) Write a program to find that the number is divisible by another number or not.
+8) Write a function to calculate the square of a given number.
+9) Write a function to find the largest number from a list.
+
+
+
+
+
+1) 
+def sum_first_10_natural_numbers():
+    total = 0
+    for i in range(1, 11):
+        total += i
+    return total
+# Call the function and print the result
+print("The sum of the first 10 natural numbers is:", sum_first_10_natural_numbers())
+2) 
+Numbers=(10,20,30,40,50)
+# Calculate the sum of all elements in the tuple
+total = sum(numbers)
+# Print the total sum
+print("The sum of all elements in the tuple is:” , total)
+3) 
+By given list:
+def increase_elements_by_one(numbers):
+    
+   # Increases each element in the given list by 1 and prints the updated list.
+
+    updated_numbers = [num + 1 for num in numbers]
+    print("Updated list:", updated_numbers)
+
+example_list = [2, 4, 6, 8]
+increase_elements_by_one(example_list)
+
+Input given by user:
+def increase_user_list_by_one(numbers):
+    updated_numbers = [num + 1 for num in numbers]
+    print("Updated list:", updated_numbers)
+numbers = list(map(int, input("Enter numbers: ").split()))
+increase_user_list_by_one(numbers)
+4) 
+def calculate_area(l,b):
+return l*b
+def calculate_perimeter(l,b):
+	return 2 * (l+b)    
+print(“Enter the dimensions of the rectangle:”)
+l=float(input(“Length:”))
+b=float(input(“Breadth:”))
+area= calculate_area(l,b)
+perimeter=calculate_perimeter(l,b)
+print(“The area of the rectangle:”,area)
+print(“The perimeter of the rectangle:”,perimeter)
+
+
+5) Python Program to Find ASCII Value of Character 
+ch = input("Enter a character: ")
+ascii_value = ord(ch)
+print("ASCII Value =", ascii_value)
+6) 
+import calendar
+year = int(input("Enter year: "))
+month = int(input("Enter month: "))
+print(calendar.month(year, month))
+
+7)
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+if num1 % num2 == 0:
+    print("The number is divisible.")
+else:
+    print("The number is not divisible.")
+8)
+def square(num):
+    return num * num
+n = int(input("Enter a number: "))
+print("Square =", square(n))
+9)
+def largest(numbers):
+    largest = numbers[0]
+    for num in numbers:
+        if num > largest:
+            largest = num
+    return largest
+numbers = [10, 25, 7, 18, 30]
+print("Largest number =", largest(numbers))
+
+
+
+
+
+
+
+
+
+Python Function-Based Practical Questions
+
+1. Speed Checker with Demerit Points
+Write a Python program using a function check_speed(speed) that accepts the speed of a vehicle.
+• If the speed is 70 km/h or below, display "OK".
+• For every 5 km/h above 70, give 1 demerit point.
+• If the demerit points are more than 5, display "Warning".
+• If the demerit points are more than 10, display "License Suspended".
+• Display the number of demerit points.
+Sample Input:
+Enter speed: 95
+Sample Output:
+Demerit Points = 5
+Warning
+2. Electricity Bill Calculator
+Write a Python program using a function calculate_bill(units) to 
+calculate the electricity bill.
+• First 100 units → ₹4 per unit
+• Next 100 units → ₹6 per unit
+• Above 200 units → ₹8 per unit
+• Add a fixed charge of ₹100.
+• If the final bill is more than ₹2000, add a 5% surcharge.
+Display the final electricity bill.
+Sample Input:
+Enter units consumed: 300
+Sample Output:
+Electricity Bill = ₹2205.0
+3. Shopping Bill with Discount and Delivery
+Write a Python program using a function shopping_bill(amount) to calculate the final shopping amount.
+• ₹5000 or above → 20% discount
+• ₹3000–₹4999 → 15% discount
+• ₹1500–₹2999 → 10% discount
+• Below ₹1500 → No discount
+• If the amount after discount is ₹3000 or above, delivery is free.
+• Otherwise, add ₹100 delivery charges.
+Sample Input:
+Enter shopping amount: 4000
+Sample Output:
+Discount = ₹600.0
+Delivery Charge = ₹0
+Final Amount = ₹3400.0
+4. Student Result with Average
+Write a Python program using a function calculate_result(m1, m2, m3) that accepts marks of three subjects.
+• Average ≥ 90 → A+
+• Average ≥ 75 → A
+• Average ≥ 60 → B
+• Average ≥ 40 → C
+• Below 40 → Fail
+Sample Input:
+Enter marks in English: 82
+Enter marks in Maths: 76
+Enter marks in Science: 88
+Sample Output:
+Average = 82.0
+Grade = A
+5. Bank Loan Eligibility
+Write a Python program using a function check_loan(age, salary, credit_score) to check whether a person is eligible for a bank loan.
+A person is eligible only if:
+• Age is between 21 and 60.
+• Salary is ₹30,000 or more.
+• Credit score is 700 or more.
+If all conditions are satisfied, display "Loan Approved"; otherwise display "Loan Rejected".
+Sample Input:
+Enter age: 35
+Enter monthly salary: 50000
+Enter credit score: 750
+Sample Output:
+Loan Approved
+6. Parking Fee Calculator
+Write a Python program using a function parking_fee(hours) to calculate parking charges.
+• First 2 hours → ₹50 total
+• Next 3 hours → ₹20 per hour
+• Every hour after 5 hours → ₹30 per hour
+• If parking time is more than 8 hours, add an extra ₹100 charge.
+Sample Input:
+Enter parking hours: 9
+Sample Output:
+Parking Fee = ₹240
+7. Employee Salary Calculator
+Write a Python program using a function calculate_salary(basic).
+Calculate:
+• HRA = 20% of basic salary
+• DA = 10% of basic salary
+• If basic salary is ₹50,000 or more, bonus = 10%.
+• Otherwise, bonus = 5%.
+Gross Salary = Basic Salary + HRA + DA + Bonus
+Sample Input:
+Enter basic salary: 60000
+Sample Output:
+HRA = ₹12000.0
+DA = ₹6000.0
+Bonus = ₹6000.0
+Gross Salary = ₹84000.0
+8. Taxi Fare Calculator
+Write a Python program using a function taxi_fare(distance).
+• First 5 km → ₹100
+• Next 10 km → ₹15 per km
+• Above 15 km → ₹12 per km
+• If the distance is more than 20 km, give a 10% discount on the total fare.
+Sample Input:
+Enter distance: 25
+Sample Output:
+Total Fare before discount = ₹340
+Discount = ₹34.0
+Final Fare = ₹306.0
+9. Student Exam Eligibility
+Write a Python program using a function check_eligibility(attendance, assignment, marks).
+A student is eligible only if:
+• Attendance is 75% or more.
+• Assignment completion is 80% or more.
+• Test marks are 40 or more.
+Sample Input:
+Enter attendance percentage: 82
+Enter assignment completion percentage: 90
+Enter test marks: 65
+Sample Output:
+Eligible for Final Exam
+10. ATM Withdrawal
+Write a Python program using a function withdraw(balance, amount).
+• If withdrawal amount is greater than the balance, display "Insufficient Balance".
+• If the amount is not a multiple of ₹100, display "Enter amount in multiples of 100".
+• Otherwise, deduct the amount and display the remaining balance.
+• If the remaining balance is less than ₹500, display "Warning: Low Balance".
+Sample Input:
+Enter balance: 5000
+Enter withdrawal amount: 4600
+Sample Output:
+Withdrawal Successful
+Remaining Balance = ₹400
+Warning: Low Balance
+
+
+
+
+Python Function-Based Practical Questions – Answers
+1. Speed Checker with Demerit Points
+def check_speed(speed):
+if speed <= 70:
+print("OK")
+else:
+points = (speed - 70) // 5
+print("Demerit Points =", points)
+
+if points > 10:
+print("License Suspended")
+elif points > 5:
+print("Warning")
+
+speed = int(input("Enter speed: "))
+check_speed(speed)
+2. Electricity Bill Calculator
+def calculate_bill(units):
+if units <= 100:
+bill = units * 4
+elif units <= 200:
+bill = 100 * 4 + (units - 100) * 6
+else:
+bill = 100 * 4 + 100 * 6 + (units - 200) * 8
+
+bill = bill + 100
+
+if bill > 2000:
+bill = bill + bill * 5 / 100
+
+print("Electricity Bill =", bill)
+
+units = int(input("Enter units consumed: "))
+calculate_bill(units)
+3. Shopping Bill with Discount and Delivery
+def shopping_bill(amount):
+if amount >= 5000:
+discount = amount * 20 / 100
+elif amount >= 3000:
+discount = amount * 15 / 100
+elif amount >= 1500:
+discount = amount * 10 / 100
+else:
+discount = 0
+
+final_amount = amount - discount
+
+if final_amount >= 3000:
+delivery = 0
+else:
+delivery = 100
+
+final_amount = final_amount + delivery
+
+print("Discount =", discount)
+print("Delivery Charge =", delivery)
+print("Final Amount =", final_amount)
+
+amount = float(input("Enter shopping amount: "))
+shopping_bill(amount)
+4. Student Result with Average
+def calculate_result(m1, m2, m3):
+average = (m1 + m2 + m3) / 3
+
+if average >= 90:
+grade = "A+"
+elif average >= 75:
+grade = "A"
+elif average >= 60:
+grade = "B"
+elif average >= 40:
+grade = "C"
+else:
+grade = "Fail"
+
+print("Average =", average)
+print("Grade =", grade)
+
+m1 = int(input("Enter marks in English: "))
+m2 = int(input("Enter marks in Maths: "))
+m3 = int(input("Enter marks in Science: "))
+
+calculate_result(m1, m2, m3)
+5. Bank Loan Eligibility
+def check_loan(age, salary, credit_score):
+if age >= 21 and age <= 60 and salary >= 30000 and credit_score >= 700:
+print("Loan Approved")
+else:
+print("Loan Rejected")
+
+age = int(input("Enter age: "))
+salary = float(input("Enter monthly salary: "))
+credit_score = int(input("Enter credit score: "))
+
+check_loan(age, salary, credit_score)
+6. Parking Fee Calculator
+def parking_fee(hours):
+if hours <= 2:
+fee = 50
+elif hours <= 5:
+fee = 50 + (hours - 2) * 20
+else:
+fee = 50 + 3 * 20 + (hours - 5) * 30
+
+if hours > 8:
+fee = fee + 100
+
+print("Parking Fee =", fee)
+
+hours = int(input("Enter parking hours: "))
+parking_fee(hours)
+7. Employee Salary Calculator
+def calculate_salary(basic):
+hra = basic * 20 / 100
+da = basic * 10 / 100
+
+if basic >= 50000:
+bonus = basic * 10 / 100
+else:
+bonus = basic * 5 / 100
+
+gross_salary = basic + hra + da + bonus
+
+print("HRA =", hra)
+print("DA =", da)
+print("Bonus =", bonus)
+print("Gross Salary =", gross_salary)
+
+basic = float(input("Enter basic salary: "))
+calculate_salary(basic)
+8. Taxi Fare Calculator
+def taxi_fare(distance):
+if distance <= 5:
+fare = 100
+elif distance <= 15:
+fare = 100 + (distance - 5) * 15
+else:
+fare = 100 + 10 * 15 + (distance - 15) * 12
+
+print("Total Fare before discount =", fare)
+
+if distance > 20:
+discount = fare * 10 / 100
+else:
+discount = 0
+
+final_fare = fare - discount
+
+print("Discount =", discount)
+print("Final Fare =", final_fare)
+
+distance = float(input("Enter distance: "))
+taxi_fare(distance)
+9. Student Exam Eligibility
+def check_eligibility(attendance, assignment, marks):
+if attendance >= 75 and assignment >= 80 and marks >= 40:
+print("Eligible for Final Exam")
+else:
+print("Not Eligible")
+
+attendance = float(input("Enter attendance percentage: "))
+assignment = float(input("Enter assignment completion percentage: "))
+marks = int(input("Enter test marks: "))
+
+check_eligibility(attendance, assignment, marks)
+10. ATM Withdrawal
+def withdraw(balance, amount):
+if amount > balance:
+print("Insufficient Balance")
+elif amount % 100 != 0:
+print("Enter amount in multiples of 100")
+else:
+balance = balance - amount
+
+print("Withdrawal Successful")
+print("Remaining Balance =", balance)
+
+if balance < 500:
+print("Warning: Low Balance")
+
+balance = int(input("Enter balance: "))
+amount = int(input("Enter withdrawal amount: "))
+
+withdraw(balance, amount)
+

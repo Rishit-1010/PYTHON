@@ -1,0 +1,14 @@
+a=int(input("Enter A "))
+b=int(input("Enter B "))
+sum=a+b
+diff=a-b
+pro=a*b
+quo=a/b
+diff2=b-a
+quo2=b/a
+print("A + B =",sum)
+print("A - B =",diff)
+print("A * B =",pro)
+print("A / B =",quo)
+print("B - A =",diff2)
+print("B / A =",quo2)

@@ -1,5 +1,5 @@
 def check_speed():
-    s=int(input("Enter your speed: "))
+    s=int(input("Enter your speed(in km/hr): "))
     if s<=70:
         print("OK")
     if s>70:

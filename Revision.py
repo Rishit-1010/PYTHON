@@ -1,4 +1,5 @@
 def sum_digits(a):
+    s=0
     while a>0:
         d=a%10
         s=s+d
@@ -18,6 +19,7 @@ def is_prime(a):
         return True
 def is_pallindrome(a):
     n=a
+    rev=0
     while n>0:
         d=n%10
         rev=(rev*10)+d
@@ -27,6 +29,6 @@ def is_pallindrome(a):
     else: 
         return False
 a=int(input("Enter a no.: "))
-print(sum_digits(a))
-print(is_prime(a))
-print(is_pallindrome(a))
+print("Sum of digits:",sum_digits(a))
+print("Prime" * is_prime(a) or "Not Prime")
+print("Pallindrome" * is_pallindrome(a) or "Not Pallindrome")
